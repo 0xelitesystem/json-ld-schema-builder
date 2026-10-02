@@ -14,13 +14,35 @@ Blank fields are omitted. The structured data should describe what is genuinely 
 
 A library card catalog: manila index cards, a typewriter heading, tabbed type selection, and a dark output card.
 
+## Use
+
+1. Pick a type: Local business, Organization, Software app or Article.
+2. Fill in the fields for that type. Blank fields are left out of the output.
+3. Watch the `application/ld+json` script block update live, then click Copy.
+4. Paste it into your page and check it with a structured-data testing tool before relying on it.
+
+## Why this exists
+
+Hand-writing JSON-LD is easy to get subtly wrong, and many generators sit behind sign-ups or tracking. This is one HTML file with no tracking and no network calls that assembles the block from the fields you fill, MIT licensed so you can run or fork it anywhere.
+
 ## Privacy
 
 Everything runs in your browser. Nothing you type is sent anywhere, stored, or saved. Closing the tab clears it.
 
-## Use it
+## Run locally
 
 Open `index.html` in any modern browser, or host it as a static page. No build step, no dependencies, no network calls.
+
+```
+git clone https://github.com/0xelitesystem/json-ld-schema-builder
+cd json-ld-schema-builder
+```
+
+Then open `index.html`, or serve the folder with `python -m http.server` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` with inline CSS and JavaScript and no dependencies.
 
 ## More
 
